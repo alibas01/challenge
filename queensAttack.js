@@ -1,14 +1,17 @@
 /*
  * Complete the 'queensAttack' function below.
  *
- * The function is expected to return an INTEGER.
+ * The function is expected to return an INTEGER. (the number of location that can be attacked)
  * The function accepts following parameters:
- *  1. INTEGER n
- *  2. INTEGER k
- *  3. INTEGER rq
- *  4. INTEGER cq
- *  5. 2D_INTEGER_ARRAY obstacles
+ *  1. INTEGER n (board size n x n )
+ *  2. INTEGER k (number of obstacles)
+ *  3. INTEGER rq (queens position row)
+ *  4. INTEGER cq (queens position column)
+ *  5. 2D_INTEGER_ARRAY obstacles (array of arrays. formed by 2 integer that represents seperate obstacle location. [[row, column],[row, column]] obstacles.length = k)
  */
+
+
+//-------------------------------First Answer---------------
 // const queensAttack = function(n, k, rq, cq, obstacles) {
 //   // Write your code here
 //   let result = 0;
@@ -85,6 +88,8 @@
 //   return result - 1;
 // };
 
+
+//-------------------second answer------------------
 const queensAttack = function (n, k, rq, cq, obstacles) {
   // Write your code here
   let result = 0;
@@ -134,6 +139,7 @@ const queensAttack = function (n, k, rq, cq, obstacles) {
   return result - 1;
 };
 
+//------------examples--------------
 console.log(
   queensAttack(100, 3, 12, 76, [
     [25, 20],

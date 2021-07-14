@@ -17,20 +17,20 @@
 // int: the frequency of a in the substring
 
 //-----------------------first solution------runtime??
-function repeatedString(s, n) {
-  //let l = s.length;
-  let count = 0;
-  while (s.length <= n) {
-    s = s + s;
-  }
-  s = s.substring(0, n).split("");
-  for (let a of s) {
-    if (a === "a") {
-      count += 1;
-    }
-  }
-  return count;
-}
+// function repeatedString(s, n) {
+//   //let l = s.length;
+//   let count = 0;
+//   while (s.length <= n) {
+//     s = s + s;
+//   }
+//   s = s.substring(0, n).split("");
+//   for (let a of s) {
+//     if (a === "a") {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
 //----------------------correct solution---
 function repeatedString(s, n) {
   let l = s.length;
@@ -56,5 +56,4 @@ function repeatedString(s, n) {
   } else {
     return count * Math.trunc(n / l) + check(s, n % l);
   }
-  return count;
 }
